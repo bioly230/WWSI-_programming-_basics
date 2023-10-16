@@ -81,6 +81,7 @@ int main()
 ```
 ![](/first_semester_C++/Converting_from_C_to_F.jpg)
 
+
 Adding the "Windows.h" library and using the "getchar()" function, I wanted it to wait for closure until the user presses the "ENTER" key. Unfortunately, I made a logical mistake in the application's operation. After opening the application in the window (double-clicking) and confirming the data, the application closes.
 
 ### Next verssion:
@@ -118,11 +119,13 @@ int main()
 ```
 ![](/first_semester_C++/Converting_from_C_to_F_2.jpg)
 
+
 I decided to edit the code written during the classes. It was enough to change variable names, make adjustments to the mathematical formula, and edit the descriptions. I also added the 'iomanip' library and a 'while' loop from which you can exit by pressing the 'q/Q' key.
 
 After opening the application in the window (by double-clicking), I noticed an issue with Polish characters in the descriptions displayed for the user. I removed the Polish characters from the descriptions shown to the user.
 
 ![](/first_semester_C++/Converting_from_C_to_F_2_double-click.jpg)
+
 
 ## [Task 2](/first_semester_C++/calculating_the_volume_of_the_cylinder_area.cpp)
 
@@ -203,4 +206,108 @@ int main()
 In my application, I'm using the "double" and a "const double" variables. 
 
 ![](/first_semester_C++/calculating_the_volume_of_the_cylinder_area.jpg)
+
 ![](/first_semester_C++/calculating_the_volume_of_the_cylinder_area_double-click.jpg)
+
+
+## [Task 3](/first_semester_C++/Projectile_height_calculator.cpp)
+
+We throw a ball with an initial velocity v_0 at an angle ∝ relative to the horizontal from the point (x=0, y=y_0). The ball's trajectory is a parabola (neglecting air resistance) given by the following equation:
+
+y = x∙tan(α) - (1/2v_0^2) * (g*x^2)/cos^2(α) + y_0
+
+You need to write a program that calculates the value of y for user-provided values of x, y_0, v_0, and ∝. Perform the calculations with one decimal place of precision. Verify the correctness of the calculations.
+
+Variables:
+
+y: the height of the ball after traveling a horizontal distance x.
+y_0: the initial height from which the ball is thrown, provided in meters.
+v_0: the initial velocity, provided in km/h (requires conversion to m/s; 1 km/h = 1000 m/3600 s).
+∝: the angle in degrees (requires conversion to radians; α[rad]=α^o π/180^o).
+g: 9.81 m/s², the gravitational acceleration, declared as a constant.
+Mathematical functions for calculating tan(α): tan(α) and cos(α): cos(α).
+Your program should take the user's input for x, y_0, v_0, and ∝, convert the units, perform the calculation, and display the result with one decimal place of precision.
+
+### Pseudo-code for this task:
+
+1. Declare and initialize the constants:
+    g = 9.81 m/s²
+2. Prompt the user for input:
+    Enter the value for x (horizontal distance): x_input
+    Enter the initial height (y_0) in meters: y_0_input
+    Enter the initial velocity in km/h: v_0_input
+    Enter the angle in degrees: angle_degrees
+3. Convert user inputs to suitable units:
+    Convert v_0_input from km/h to m/s: v_0_mps = v_0_input * (1000 m/3600 s)
+    Convert angle_degrees to radians: angle_radians = angle_degrees * π/180
+4. Calculate the height y using the provided formula:
+    Calculate x_term = x_input * tan(angle_radians)
+    Calculate y_term = (1/(2 * v_0_mps^2)) * (g * x_input^2)/(cos(angle_radians))^2
+    Calculate y = x_term - y_term + y_0_input
+5. Display the result:
+    Print "The height of the ball at x =", x_input, "is y =", y, "meters."
+6. End the program.
+
+### Editing the code from the previous task:
+
+```
+#include <iostream>
+#include <iomanip>
+#include <cmath> // aby używać matematycznych funkcji takich jak tan() i cos(), które są potrzebne do przeliczenia kąta z stopni na radiany.
+
+
+using namespace std;
+
+// stałe
+const double pi = 3.14; 
+const double g = 9.81; // wartość przyspieszenia ziemskiego w m/s^2
+// zmienne
+double x;
+double y_0;
+double v_0;
+double alpha;
+double y;
+
+int main() 
+{
+    // dane od użytkownika
+    cout << "Podaj odleglosc (w metrach): ";
+    cin >> x;
+
+    cout << "Podaj wysokosc poczatkowa (w metrach): ";
+    cin >> y_0;
+
+    cout << "Podaj kat alfa (w stopniach): ";
+    cin >> alpha;
+
+    cout << "Podaj predkosc poczatkowa (w m/s): ";
+    cin >> v_0;
+    
+    // przeliczanie kąta ze stopni na radiany
+    double alpha_rad = alpha * pi / 180.0;
+
+    y = x * tan(alpha_rad) - (1.0 / (2.0 * pow(v_0, 2))) * (g * pow(x, 2) / pow(cos(alpha_rad), 2)) + y_0;
+
+    cout << fixed << setprecision(1);
+    cout << "Wysokosc po przebyciu " << x << " metrow wynosi " << y << " metrow." << endl;
+
+    cout << "\nNacisnij 'q', aby zakonczyc program...";
+
+    while (true) 
+    {
+        char key = getchar(); // Oczekuj na pojedynczy znak
+        if (key == 'q' || key == 'Q') 
+        {
+            break; // Wyjście z pętli po naciśnięciu "q" lub "Q"
+        }
+    }
+
+    return 0;
+}
+```
+
+During the modification of the code written for the last task, I added the "cmath" library. This library enables the use of more advanced mathematical functions in C++. For example, it allows the use of mathematical functions like tan() and cos().
+
+![](/first_semester_C++/Projectile_height_calculator.jpg)
+
+![](/first_semester_C++/Projectile_height_calculator_double-click.jpg)
