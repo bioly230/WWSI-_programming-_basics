@@ -1,6 +1,7 @@
 # Title: First Laboratories. (10/8/2023)
 
-## Task 1
+## [Task 1](/first_semester_C++/Converting_from_C_to_F_2.cpp)
+
 Write a program to convert a temperature given in Celsius to Fahrenheit using the formula f=9/5c+32. Display the result with a precision of the calculations by comparing the results obtained the program with those obtained using an [online calculator](http://www.onlineconversion.com/temperature.htm). Generate a testing report.
 
 ### Let's begin by writing pseudo-code for this task.
@@ -122,3 +123,84 @@ I decided to edit the code written during the classes. It was enough to change v
 After opening the application in the window (by double-clicking), I noticed an issue with Polish characters in the descriptions displayed for the user. I removed the Polish characters from the descriptions shown to the user.
 
 ![](/first_semester_C++/Converting_from_C_to_F_2_double-click.jpg)
+
+## [Task 2](/first_semester_C++/calculating_the_volume_of_the_cylinder_area.cpp)
+
+Write a program to calculate the volume and total surface area of a selected geometric solid, such as a right triangular prism, a right triangular pyramid, or a cylinder. Determine which parameters of the solid will be provided by the user and which ones will be calculated as auxiliary values. 
+
+Verify the correctness of the calculations by comparing the results obtained through the program with those obtained using a calculator or spreadsheet. Generate a testing report.
+
+### Pseudo-code for this task.
+
+1. Choose the type of geometric solid (e.g., cylinder).
+2. Define variables: radius (r), height (h), volume (V), total surface area (A).
+3. Input values for radius (r) and height (h) from the user.
+4. Calculate the volume of the cylinder (V) using the formula: V = pi * r^2 * h.
+5. Calculate the total surface area of the cylinder (A) using the formula: A = 2 * pi * r * (r + h).
+6. Display the calculated values of volume (V) and total surface area (A).
+7. Compare the results with calculations performed using a calculator or spreadsheet.
+8. If the results match, generate a testing report and save it.
+9. End the program.
+
+### Common Variables in C++
+
+In C++, various variable types are used to store different types of data. Here are some basic variable types explained in simple terms:
+
+1. int: An integer variable type used to store whole numbers, e.g., 1, -5, 100.
+2. double: A floating-point variable type used to store decimal numbers, e.g., 3.14, -0.5, 2.0.
+3. char: A character variable type used to store single characters, e.g., 'a', 'B', '$'.
+4. bool: A boolean variable type used to store logical values, true (true) or false (false).
+5. string: A string variable type used to store sequences of characters, e.g., "Hello, World!".
+5. float: Similar to double, but with less precision (fewer decimal places).
+
+These types allow programmers to store and manipulate different kinds of data depending on the program's requirements. For example, if you want to store a person's age, you would use int, and if you want to store a floating-point value like average temperature, you would use double or float.
+
+### I analyze the code written during the task 1
+
+```
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+const double pi = 3.14; // Przybliżona wartość liczby Pi
+double r, h, V, A;
+
+int main() 
+{
+    cout << "Obliczanie objetosci o pola powierzchni calowitej Walca:" << endl;
+    cout << "\nPodaj promien Walca (w cm): ";
+    cin >> r;
+
+    cout << "\nPodaj wysokosc Walca (w cm): ";
+    cin >> h;
+
+    
+    // Obliczanie objętości i pola powierzchni całkowitej walca
+    V = pi * r * r * h;
+    A = 2 * pi * r * (r + h);
+
+    cout << fixed << setprecision(2);
+    cout << "Objetosc = " << V << " cm^3" << endl;
+    cout << "Pole powierzchni calkowitej = " << A << " cm^2" << endl;
+
+
+
+    cout << "\nNacisnij 'q', aby zakonczyc program...";
+
+    while (true) 
+    {
+        char key = getchar(); // Oczekuj na pojedynczy znak
+        if (key == 'q' || key == 'Q') 
+        {
+            break; // Wyjście z pętli po naciśnięciu "q" lub "Q"
+        }
+    }
+
+    return 0;
+}
+```
+In my application, I'm using the "double" and a "const double" variables. 
+
+![](/first_semester_C++/calculating_the_volume_of_the_cylinder_area.jpg)
+![](/first_semester_C++/calculating_the_volume_of_the_cylinder_area_double-click.jpg)
