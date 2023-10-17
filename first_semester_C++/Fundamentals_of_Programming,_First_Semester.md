@@ -2,16 +2,16 @@
 
 ## [Task 1](/first_semester_C++/Converting_from_C_to_F_2.cpp)
 
-Write a program to convert a temperature given in Celsius to Fahrenheit using the formula f=9/5c+32. Display the result with a precision of the calculations by comparing the results obtained the program with those obtained using an [online calculator](http://www.onlineconversion.com/temperature.htm). Generate a testing report.
+Write a program to convert a temperature given in Celsius to Fahrenheit using the formula f=9/5c+32. Show the result accurate to the third decimal place and compare it with those obtained by using the [online calculator](http://www.onlineconversion.com/temperature.htm). Generate a testing report.
 
 ### Let's begin by writing pseudo-code for this task.
 
 ```
-Pseudo-code is a method for describing algorithms and logical programming concepts in a way that is similar to natural language. It is a human-readable form used for planning and outlining algorithms before their implementation in a specific programming language. Pseudo-code is not a programming language itself but rather a tool for describing algorithmic steps.
+Pseudo-code is a method to describe algorithms and logical programming concepts in a way that is similar to natural language. It is a human-readable form used for planning and outlining algorithms before their implementation in a specific programming language. Pseudo-code is not a programming language itself but rather a tool for describing algorithmic steps.
 
 Key characteristics of pseudo-code include:
 
-1. Simplicity: Pseudo-code is typically simple to understand and doesn't involve complex syntax or programming language elements.
+1. Simplicity: Pseudo-code is usually simple to understand and doesn't involve complex syntax or programming language elements.
 
 2. Informality: There is no strict syntax for pseudo-code. You can use natural language and logical diagrams to describe the algorithm.
 
@@ -19,7 +19,7 @@ Key characteristics of pseudo-code include:
 
 4. Clarity: Good pseudo-code should be clear and understandable to other programmers who may work on the project.
 
-5. Non-Mandatory: Pseudo-code is an optional design tool and is not required to write source code in a particular programming language. It is a helpful tool for the planning phase.
+5. Non-Mandatory: Pseudo-code is an optional design tool and is not required to beable to write source code. It is a helpful tool for the planning phase.
 ```
 
 1. Start the program.
@@ -31,7 +31,7 @@ Key characteristics of pseudo-code include:
 
 ### Next, I analyze the code written during the classes.
 
-This program is a calculator. It is used for converting temperature given in degrees Fahrenheit to temperature given in degrees Celsius.
+This program is a calculator. It is used for converting temperature given in Fahrenheit to temperature given in Celsius.
 
 ```
 //podstawy programowania 08.10/23 CWICZENIA
@@ -72,7 +72,7 @@ int main()
     cin >> c;
     float f;
     f = 5.0 / 9 * (c + 32);
-    cout << fixed << setprecision(2);
+    cout << fixed << setprecision(3);
     cout << c << " C = " << f << " F";
 
     getchar();
@@ -82,7 +82,7 @@ int main()
 ![](/first_semester_C++/Converting_from_C_to_F.jpg)
 
 
-Adding the "Windows.h" library and using the "getchar()" function, I wanted it to wait for closure until the user presses the "ENTER" key. Unfortunately, I made a logical mistake in the application's operation. After opening the application in the window (double-clicking) and confirming the data, the application closes.
+While adding the "Windows.h" library and using the "getchar()" function, the programme is expected to wait until the user presses the "ENTER" key. Due to an incorrect assumption of the eneter key function (twofold function), the programme cloes itself automatically in this closes.
 
 ### Next verssion:
 
@@ -100,7 +100,7 @@ int main()
     cin >> c;
     float f;
     f = 5.0 / 9 * (c + 32);
-    cout << fixed << setprecision(2);
+    cout << fixed << setprecision(3);
     cout << c << " C = " << f << " F";
 
     cout << "\nNacisnij 'q', aby zakonczyc program...";
@@ -120,9 +120,9 @@ int main()
 ![](/first_semester_C++/Converting_from_C_to_F_2.jpg)
 
 
-I decided to edit the code written during the classes. It was enough to change variable names, make adjustments to the mathematical formula, and edit the descriptions. I also added the 'iomanip' library and a 'while' loop from which you can exit by pressing the 'q/Q' key.
+It was decided to change the code written during the classes. It was enough to change variable names, make adjustments to the mathematical formula, and edit the descriptions. It whas also added the 'iomanip' library and a 'while' loop from which the user can exit by pressing the 'q/Q' key.
 
-After opening the application in the window (by double-clicking), I noticed an issue with Polish characters in the descriptions displayed for the user. I removed the Polish characters from the descriptions shown to the user.
+After opening the application in the window (by double-clicking), It was noticed that there was an issue with Polish characters in the descriptions shown to the user. the characters were removed.
 
 ![](/first_semester_C++/Converting_from_C_to_F_2_double-click.jpg)
 

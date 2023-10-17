@@ -11,7 +11,7 @@ int main()
     cin >> c;
     float f;
     f = 5.0 / 9 * (c + 32);
-    cout << fixed << setprecision(2);
+    cout << fixed << setprecision(3);
     cout << c << " C = " << f << " F";
 
     cout << "\nNaciśnij 'q', aby zakonczyc program...";
