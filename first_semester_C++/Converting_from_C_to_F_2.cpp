@@ -10,11 +10,12 @@ int main()
     float c;
     cin >> c;
     float f;
-    f = 9 / 5 * c + 32;
+    // f = 9 / 5 * c + 32; błędny wzór
+    f = c * 9 / 5 + 32; // poprawny wzór na przeliczenie wybranych jednostek temperatury
     cout << fixed << setprecision(3);
     cout << c << " C = " << f << " F";
 
-    cout << "\nNaciśnij 'q', aby zakonczyc program...";
+    cout << "\nNacisnij 'q', aby zakonczyc program...";
 
     while (true) 
     {

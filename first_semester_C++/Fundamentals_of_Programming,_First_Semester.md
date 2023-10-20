@@ -99,7 +99,8 @@ int main()
     float c;
     cin >> c;
     float f;
-    f = 5.0 / 9 * (c + 32);
+    // f = 9 / 5 * c + 32; błędny wzór
+    f = c * 9 / 5 + 32; // poprawny wzór na przeliczenie wybranych jednostek temperatury
     cout << fixed << setprecision(3);
     cout << c << " C = " << f << " F";
 
@@ -125,6 +126,10 @@ It was decided to change the code written during the classes. It was enough to c
 After opening the application in the window (by double-clicking), It was noticed that there was an issue with Polish characters in the descriptions shown to the user. the characters were removed.
 
 ![](/first_semester_C++/Converting_from_C_to_F_2_double-click.jpg)
+
+### Checking the results in an online calculator
+
+![](/first_semester_C++/Converting_from_C_to_F_2_verification.png)
 
 
 ## [Task 2](/first_semester_C++/calculating_the_volume_of_the_cylinder_area.cpp)
@@ -311,3 +316,6 @@ During the modification of the code written for the last task, I added the "cmat
 ![](/first_semester_C++/Projectile_height_calculator.jpg)
 
 ![](/first_semester_C++/Projectile_height_calculator_double-click.jpg)
+
+### [Oryginal content of tasks](/first_semester_C++/pp%20cw01%20wyrazenia%20arytmetyczne.pdf)
+
