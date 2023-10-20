@@ -10,7 +10,7 @@ int main()
     float c;
     cin >> c;
     float f;
-    f = 5.0 / 9 * (c + 32);
+    f = 9 / 5 * c + 32;
     cout << fixed << setprecision(3);
     cout << c << " C = " << f << " F";
 
