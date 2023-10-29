@@ -1,6 +1,8 @@
+##### [Back to topic list.](/first_semester_C++/first_semester_C++.md)
+
 # Title: First Laboratories. (10/8/2023)
 
-## [Task 1](/first_semester_C++/Converting_from_C_to_F_2.cpp)
+## [Task 1](/first_semester_C++/08_10_23/Converting_from_C_to_F_2.cpp)      
 
 Write a program to convert a temperature given in Celsius to Fahrenheit using the formula f=9/5c+32. Show the result accurate to the third decimal place and compare it with those obtained by using the [online calculator](http://www.onlineconversion.com/temperature.htm). Generate a testing report.
 
@@ -51,7 +53,7 @@ int main() {
     cout << f << " F = " << c << " C";
 }
 ```
-![](/first_semester_C++/C++Lab10-8-2023.jpg)
+![](/first_semester_C++/08_10_23/C++Lab10-8-2023.jpg)
 
 ```
 /*
@@ -79,7 +81,7 @@ int main()
     return 0;
 }
 ```
-![](/first_semester_C++/Converting_from_C_to_F.jpg)
+![](/first_semester_C++/08_10_23/Converting_from_C_to_F.jpg)
 
 
 While adding the "Windows.h" library and using the "getchar()" function, the programme is expected to wait until the user presses the "ENTER" key. Due to an incorrect assumption of the eneter key function (twofold function), the programme cloes itself automatically in this closes.
@@ -118,21 +120,21 @@ int main()
     return 0;
 }
 ```
-![](/first_semester_C++/Converting_from_C_to_F_2.jpg)
+![](/first_semester_C++/08_10_23/Converting_from_C_to_F_2.jpg)
 
 
 It was decided to change the code written during the classes. It was enough to change variable names, make adjustments to the mathematical formula, and edit the descriptions. It whas also added the 'iomanip' library and a 'while' loop from which the user can exit by pressing the 'q/Q' key.
 
 After opening the application in the window (by double-clicking), It was noticed that there was an issue with Polish characters in the descriptions shown to the user. the characters were removed.
 
-![](/first_semester_C++/Converting_from_C_to_F_2_double-click.jpg)
+![](/first_semester_C++/08_10_23/Converting_from_C_to_F_2_double-click.jpg)
 
 ### Checking the results in an online calculator
 
-![](/first_semester_C++/Converting_from_C_to_F_2_verification.png)
+![](/first_semester_C++/08_10_23/Converting_from_C_to_F_2_verification.png)
 
 
-## [Task 2](/first_semester_C++/calculating_the_volume_of_the_cylinder_area.cpp)
+## [Task 2](/first_semester_C++/08_10_23/calculating_the_volume_of_the_cylinder_area.cpp)
 
 Write a program to calculate the volume and total surface area of a selected geometric solid, such as a right triangular prism, a right triangular pyramid, or a cylinder. Determine which parameters of the solid will be provided by the user and which ones will be calculated as auxiliary values. 
 
@@ -210,12 +212,12 @@ int main()
 ```
 In my application, I'm using the "double" and a "const double" variables. 
 
-![](/first_semester_C++/calculating_the_volume_of_the_cylinder_area.jpg)
+![](/first_semester_C++/08_10_23/calculating_the_volume_of_the_cylinder_area.jpg)
 
-![](/first_semester_C++/calculating_the_volume_of_the_cylinder_area_double-click.jpg)
+![](/first_semester_C++/08_10_23/calculating_the_volume_of_the_cylinder_area_double-click.jpg)
 
 
-## [Task 3](/first_semester_C++/Projectile_height_calculator.cpp)
+## [Task 3](/first_semester_C++/08_10_23/Projectile_height_calculator.cpp)
 
 We throw a ball with an initial velocity v_0 at an angle ∝ relative to the horizontal from the point (x=0, y=y_0). The ball's trajectory is a parabola (neglecting air resistance) given by the following equation:
 
@@ -313,9 +315,11 @@ int main()
 
 During the modification of the code written for the last task, I added the "cmath" library. This library enables the use of more advanced mathematical functions in C++. For example, it allows the use of mathematical functions like tan() and cos().
 
-![](/first_semester_C++/Projectile_height_calculator.jpg)
+![](/first_semester_C++/08_10_23/Projectile_height_calculator.jpg)
 
-![](/first_semester_C++/Projectile_height_calculator_double-click.jpg)
+![](/first_semester_C++/08_10_23/Projectile_height_calculator_double-click.jpg)
 
-### [Oryginal content of tasks](/first_semester_C++/pp%20cw01%20wyrazenia%20arytmetyczne.pdf)
+### [Oryginal content of tasks.](/first_semester_C++/08_10_23/pp%20cw01%20wyrazenia%20arytmetyczne.pdf)
+
+##### [Back to topic list.](/first_semester_C++/first_semester_C++.md)
 
