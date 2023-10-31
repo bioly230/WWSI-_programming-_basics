@@ -450,14 +450,12 @@ void przeliczFnaK()
         cout << "Bledna temp. w Fahrenheita.";
     }
 }
-
-char wybor;
-
 int main()
 {
 
     for (;;)
     {
+        char wybor;
         cout << "MENU GLOWNE:" << endl;
         cout << "------------" << endl;
         cout << "1. Przeliczanie st. Kelwina na st. Celciusze" << endl;
@@ -498,13 +496,17 @@ int main()
                 cout << "Nie ma takiej opcji w MENU!" << endl;
         }
         cout << "\nNacisnij ENTER, aby kontyuowac!";
-        cin.ignore();
-        system("cls");
         cout << endl;
     }
     return 0;
 }
 ```
+![](/first_semester_C++/22_10_23/converting_temp_use_switch_automatic_menu.jpg)
+<!---
+Dzięki dodaniu pustej pętli `for` po dokonaniu obliczeń program wraca do MENU automatycznie. Wykorzystanie funkcji `getch()` z biblioteki `conio.h` powoduje automatyczne zatwierdzenie wyboru z MENU.
+-->
+By adding an empty `for` loop, after making calculations, the program returns to the MENU automatically. Using the `getch()` function from the `conio.h` libray automatically confirms the selection from the MENU.
+
 ## [Task 2:](/first_semester_C++/22_10_23/valume_and_total_surface_area_calculator_for_3_solids.cpp)
 
 Expand the program from task 2 of the previous execises so that it determines the total surface area and calume 3 solids, and calculations for individual solids should be carried out by 3 different functions (you can also separate functions for calculating the total surface area and volume). Additionally, the program should check the correctness of the entered data (i.e. do not perform calculations if the user will provide negative edge langths). Check the correctness of the obtained results; document the check.
@@ -514,39 +516,41 @@ Expand the program from task 2 of the previous execises so that it determines th
 #include <iomanip>
 #include <conio.h>
 #include <stdint.h>
+#include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
 void pp_objetosc_walca()
 {
-    const double pi = 3.14; // Przybliżona wartość liczby Pi
+    const double pi = 3.14;
     double r, h, V, A;
-    cout << "Obliczanie objetosci i pola powierzchni calkowitej Walca:" << endl;
+    cout << "\nObliczanie objetosci i pola powierzchni calkowitej Walca:"; 
     cout << "\nPodaj promien Walca (w cm): ";
     cin >> r;
 
     cout << "\nPodaj wysokosc Walca (w cm): ";
     cin >> h;
 
-    if (r && h > 0)
+    if (r > 0 && h > 0)
     {
         V = pi * r * r * h;
         A = 2 * pi * r * (r + h);
 
         cout << fixed << setprecision(2);
-        cout << "Objetosc = " << V << " cm^3" << endl;
-        cout << "Pole powierzchni calkowitej = " << A << " cm^2" << endl;
+        cout << "Objetosc = " << V << " cm^3"; 
+        cout << "\nPole powierzchni calkowitej = " << A << " cm^2"; 
     }
     else
     {
-        cout << "\nPodane wartości muszą być wartościami dodatnimi różnymi od 0!" << endl;
+        cout << "\nPodane wartości muszą być wartościami dodatnimi różnymi od 0!"; 
     }
 }
 void graniastosłup_prostokatny_o_podstawie_trapezu_rownoramiennego()
 {
     double a, b, h, L, S, H, V;
 
-    cout << "Obliczanie objetosci i pola powierzchni calkowitej Graniastoslupa prostokatnego o podstawie trapezu rownoramiennego:" << endl;
+    cout << "\nObliczanie objetosci i pola powierzchni calkowitej Graniastoslupa prostokatnego o podstawie trapezu rownoramiennego:"; 
     cout << "\nPodaj dlugosc krotszej podstawy trapezu (w cm): " ;
     cin >> a;
 
@@ -562,25 +566,24 @@ void graniastosłup_prostokatny_o_podstawie_trapezu_rownoramiennego()
     cout << "\nPodaj wysokosc graniastoslupa (w cm): ";
     cin >> H;
 
-    if (a && b && h && L && H > 0)
+    if (a > 0 && b > 0 && h > 0 && L > 0 && H > 0)
     {
-        S = a + b + 2 * sqrt((0.25 * (b - a) * (b - a)) + h * h) + 2 * L; // obliczanie pola powierzchni całkowitej graniastosłuma
-        V = (1.0 / 2) * (a + b) * h * H; // obliczanie ojętości
+        S = a + b + 2 * sqrt((0.25 * (b - a) * (b - a)) + h * h) + 2 * L; 
+        V = (1.0 / 2) * (a + b) * h * H; 
 
         cout << fixed << setprecision(2);
-        cout << "Objetosc = " << V << " cm^3" << endl;
-        cout << "Pole powierzchni calkowitej = " << S << " cm^2" << endl;
+        cout << "Objetosc = " << V << " cm^3"; 
+        cout << "\nPole powierzchni calkowitej = " << S << " cm^2"; 
     }
     else
     {
-        cout << "\nPodane wartości muszą być wartościami dodatnimi różnymi od 0!" << endl;
-    }
+        cout << "\nPodane wartości muszą być wartościami dodatnimi różnymi od 0!"; 
 }
 void ostrosłup_prosty_o_podstawie_prostokata()
 {
     double a, b, h, P, V;
 
-    cout << "Obliczam pole powierzchni calkowitej i objetosc Ostroslupa prostego o podstawie prostokata:" << endl;
+    cout << "\nObliczam pole powierzchni calkowitej i objetosc Ostroslupa prostego o podstawie prostokata:"; 
     cout << "\nPodaj dlugosc boku a (w cm): ";
     cin >> a;
 
@@ -590,18 +593,18 @@ void ostrosłup_prosty_o_podstawie_prostokata()
     cout << "\nPodaj wysokosc graniastoslupa (w cm): ";
     cin >> h;
 
-    if (a && b && h > 0)
+    if (a > 0 && b > 0 && h > 0)
     {
-        P = 2 * a * b + 2 * a * h + b * h; // obliczanie pola powierzchni
-        V = (1.0 / 3) * a * b * h; // obliczanie objętości
+        P = 2 * a * b + 2 * a * h + b * h; 
+        V = (1.0 / 3) * a * b * h; 
 
         cout << fixed << setprecision(2);
-        cout << "Objetosc = " << V << " cm^3" << endl;
-        cout << "Pole powierzchni calkowitej = " << P << " cm^2" << endl;
+        cout << "Objetosc = " << V << " cm^3"; 
+        cout << "\nPole powierzchni calkowitej = " << P << " cm^2"; 
     }
     else
     {
-        cout << "\nPodane wartości muszą być wartościami dodatnimi różnymi od 0!" << endl;
+        cout << "\nPodane wartości muszą być wartościami dodatnimi różnymi od 0!"; 
     }
     
 }
@@ -611,11 +614,10 @@ int main()
     for (;;)
     {
         char wybor;
-
-        cout << "Aplikacja sluzy do obliczania pola powierzchni calkowitej i objetosci nastepujacych figur:" << endl;
-
+        
+        cout << "\nAplikacja sluzy do obliczania pola powierzchni calkowitej i objetosci nastepujacych figur:" << endl;
         cout << "\nMENU GLOWNE:" << endl;
-        cout << "############" << endl;
+        cout << "################################################################" << endl;
         cout << "1. Walec" << endl;
         cout << "2. Graniastoslup prostokatny o podstawie trapezu rownoramiennego" << endl;
         cout << "3. Ostroslup prostokatny o podstawie prostokata" << endl;
@@ -642,12 +644,18 @@ int main()
             cout << "Nie ma takiej opcji w MENU!";
             break;
         }
-        getchar(); getchar();
-        system("cls");
+        /*getchar(); getchar();
+        system("cls");*/
+        cout << "\nNacisnij ENTER, aby kontyuowac!";
+        cout << endl;
     }
     return 0;
 }
 ```
-
+![](/first_semester_C++/22_10_23/valume_and_total_surface_area_calculator_for_3_solids.jpg)
+<!--
+Kod z tego zadania został rowinięty według wyżej opisanego schematu.
+-->
+The code from this task was developed according to the above-described scheme.
 ### [Oryginal content of tasks.](/first_semester_C++/22_10_23/pp%20cw02%20funkcje%20+%20elementy%20warunkow%20.pdf)
 ##### [Back to topic list.](/first_semester_C++/first_semester_C++.md)

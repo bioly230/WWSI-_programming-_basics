@@ -112,13 +112,14 @@ void przeliczFnaK()
     }
 }
 
-char wybor; // typ zmiennej "char" oznacza, że jest to znak z klawiatury
 
 int main()
 {
 
     for (;;) // zamknięcie w pustej pentli pozwoli użytkownikowi zdacydować kiedy chce zakończyć prace aplikacji
     {
+        char wybor; // typ zmiennej "char" oznacza, że jest to znak z klawiatury
+        
         cout << "MENU GLOWNE:" << endl;
         cout << "------------" << endl;
         cout << "1. Przeliczanie st. Kelwina na st. Celciusze" << endl;
@@ -159,8 +160,8 @@ int main()
                 cout << "Nie ma takiej opcji w MENU!" << endl;
         }
         cout << "\nNacisnij ENTER, aby kontyuowac!";
-        cin.ignore(); // do oczyszecznia bufora wejści po wczytaniu znaku z klawiatury za pomocą funkcji "getch()"
-        system("cls");
+        /*cin.ignore(); // do oczyszecznia bufora wejści po wczytaniu znaku z klawiatury za pomocą funkcji "getch()"
+        system("cls");*/
         cout << endl;
     }
     return 0;
