@@ -183,6 +183,32 @@ int main()
 	}
 }
 ```
+`pow(pow(x, k) * pow(y, k), 1.0 / k);`
+<!--
+Ten zapis oblicza średnią potęgową rzędu "k" dwóch liczb "x" i "y". Teraz omówmy go krok po kroku:
+
+1. `pow(x, k)` podnosi liczbę "x" do potęgi "k". W tym przypadku podnosimy "x" do potęgi "k".
+
+2. `pow(y, k)` podnosi liczbę "y" do potęgi "k". W tym przypadku podnosimy "y" do potęgi "k".
+
+3. Następnie obie te wartości są pomnożone: `pow(x, k) * pow(y, k)`.
+
+4. Wynik tego mnożenia jest podniesiony do potęgi odwrotnej do "k", co jest reprezentowane jako `1.0 / k`. Dla przykładu, jeśli "k" wynosi 2, to 1.0/2 to 0.5, co oznacza pierwiastek kwadratowy.
+
+6. Ostatecznie całe wyrażenie jest zwracane jako wynik obliczeń.
+
+Podsumowując, ten zapis wykonuje operacje podnoszenia "x" i "y" do potęgi "k", a następnie oblicza "k"-tą pierwiastek z wyniku mnożenia tych potęg, co jest równoznaczne ze średnią potęgową rzędu "k".
+-->
+This notation calculates the power mean of order "k" of two numbers "x" and "y". Let's discuss it step by step:
+
+1. `pow(x, k)` raises the number "x: to the power "k". In this case we raise "y" to the power of "k".
+2. `pow(y, k)` raises the number "y" to the power "k". In this case we raise "y" to the power of "k".
+3. Then both values are multiplied: `pow(x, k) * pow(y, k)`.
+4. The result of this multiplication is raised to the inverse power of "k", which is represented as `1.0 / k`. For example, if "k" is 2, then 1.0 / 2 is 0.5, which is the square root.
+6. The entire expression is returned as the result of the calculation.
+
+In summary, this notation performs the operations of raising "x" and "y" to the "k" power, and then calculates the "k"th root of the result of multiplying these powers, which is equivalent to a power-law average of order "k".
+
 ![](/first_semester_C++/22_10_23_part2/task2.jpg)
 ## [Task 3:](/first_semester_C++/22_10_23_part2/income_and_taxes.cpp)
 According to the block diagram below, write a program that calculates the tax amout for the given income. Carry out program tests.
