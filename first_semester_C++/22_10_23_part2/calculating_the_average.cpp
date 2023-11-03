@@ -18,9 +18,9 @@ double sr_a(double x, double y)
     return (x +y) / 2;
 }
 
-double sr_k(double x, double y)
+double sr_p_k(double x, double y, int k)
 {
-    return sqrt((x * y) / 2);
+    return pow(pow(x, y) * pow(y, k), 1.0 / k);
 }
 
 int main() 
@@ -35,7 +35,7 @@ int main()
 	cout << "\n\th = sr. harmoniczna";
 
     cout << "\n\ta = sr. artmetyczna";
-    cout << "\n\tk = sr. kwadratowa\n";
+    cout << "\n\tk = sr. potegowa rzedu \"k\"\n";
 	cin >> wybor;
 
 	switch (wybor)
@@ -43,7 +43,12 @@ int main()
 	case 'g':wynik = sr_g(liczba1, liczba2); break;
 	case 'h':wynik = sr_h(liczba1, liczba2); break;
     case 'a':wynik = sr_a(liczba1, liczba2); break;
-    case 'k':wynik = sr_k(liczba1, liczba2); break;
+    case 'k': 
+		int k;
+		cout << "Podaj rzad k: ";
+		cin >> k;
+		wynik = sr_p_k(liczba1, liczba2, k);
+		break;
 	default: flaga = false;
 	}
 
