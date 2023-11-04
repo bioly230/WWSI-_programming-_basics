@@ -20,7 +20,7 @@ double sr_a(double x, double y)
 
 double sr_p_k(double x, double y, int k)
 {
-    return pow(pow(x, y) * pow(y, k), 1.0 / k);
+    return pow(pow(x, k) * pow(y, k), 1.0 / k);
 }
 
 int main() 
