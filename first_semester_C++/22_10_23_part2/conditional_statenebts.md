@@ -378,7 +378,9 @@ int main()
 
 ## [Task 2:](/first_semester_C++/05_11_23/5-11-23_petla_wihile.cpp)
 Extend the `zalicz_cyfry(a)` function (example 3 of lecture PP05, program [pp_cw04_2_zliczanie_cyfr.cpp](/first_semester_C++/05_11_23/pp_cw04_2_zliczanie_cyfr.cpp)) determinig the number of digits integer a so that it works according to the block diagram below.
+
 ![](/first_semester_C++/05_11_23/block_diagram_task2.jpg)
+
 Comments:
 
 1. the div operation in the flowchart means integer division;
