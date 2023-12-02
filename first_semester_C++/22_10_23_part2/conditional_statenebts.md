@@ -560,5 +560,6 @@ int main()
 ```
 ![](/first_semester_C++/05_11_23/power_test.jpg)
 ![](/first_semester_C++/05_11_23/Flowchart%20(1).jpg)
+The [mirro](https://miro.com/signup/) application was used to create the flowchart.
 ### [Oryginal content of tasks.](/first_semester_C++/05_11_23/pp%20cw04%20instrukcje%20iteracyjne.pdf)
 ##### [Back to topic list.](/first_semester_C++/first_semester_C++.md)
