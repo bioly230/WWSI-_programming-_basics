@@ -79,7 +79,9 @@ basal metabolic rate (𝑝𝑝𝑚), ideal body weight (𝑖𝑚𝑐) and deviat
 the following designs:
 ![](/first_semester_C++/19_11_23/task1_cw06_description.png)
 where 𝑤 – patient's body weight [kg], ℎ – patient's height [cm], 𝑎 – patient's age [years].
-Make two versions of the function based on the examples from the exercises: [pp_cw06_2_referencje_przekazywane_do_funkcji.cpp](/first_semester_C++/19_11_23/pp_cw06_2_referencje_przekazywane_do_funkcji.cpp) 
+Make two versions of the function based on the examples from the exercises:
+ 
+[pp_cw06_2_referencje_przekazywane_do_funkcji.cpp](/first_semester_C++/19_11_23/pp_cw06_2_referencje_przekazywane_do_funkcji.cpp) 
 ```
 #include<iostream>
 using namespace std;
