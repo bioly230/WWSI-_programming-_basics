@@ -78,9 +78,10 @@ Write a function that, based on information provided to it about the patient suc
 basal metabolic rate (𝑝𝑝𝑚), ideal body weight (𝑖𝑚𝑐) and deviation from ideal body weight (𝑑) according to
 the following designs:
 ![](/first_semester_C++/19_11_23/task1_cw06_description.png)
+
 where 𝑤 – patient's body weight [kg], ℎ – patient's height [cm], 𝑎 – patient's age [years].
 Make two versions of the function based on the examples from the exercises:
- 
+
 [pp_cw06_2_referencje_przekazywane_do_funkcji.cpp](/first_semester_C++/19_11_23/pp_cw06_2_referencje_przekazywane_do_funkcji.cpp) 
 ```
 #include<iostream>
@@ -198,6 +199,7 @@ int main()
 Funkcja `obliczParametryPacjenta` przyjmuje parametry i oblicza wskaźnik podstawowej przemiany materii (ppm), idealną masę ciała (imc) oraz odstępstwo od idealnej masy ciała (d). Parametry te są przekazywane do funkcji przez referencję.
 -->
 The `calculatePatientParameters` function accepts and calculates the basal metabolic rate (ppm), ideal body weight (imc) and deviation from ideal body weight (d). These parameters are passed to the function by reference.
+
 2. [Parameters 𝑝𝑝𝑚, 𝑖𝑚𝑐, 𝑑 are passed to the function through the pointer:](/first_semester_C++/19_11_23/task_query_2.cpp)
 ```
 #include<iostream>
