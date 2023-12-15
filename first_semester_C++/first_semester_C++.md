@@ -5,3 +5,4 @@
 3. [Conditional statements](/first_semester_C++/22_10_23_part2/conditional_statenebts.md)
 4. [Recursive functions](/first_semester_C++/19_11_23/recursion.md)
 5. [Arrays](/first_semester_C++/19_11_23/arrays.md)
+6. [References and pointers as function parameters](/first_semester_C++/19_11_23/references_and_pointers_as_function_parameters.md)
