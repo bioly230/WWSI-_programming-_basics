@@ -384,7 +384,7 @@ int main()
 ```
 ### Program operation (several functionalities):
 
-![](/projekt_indywidualny/dzialanie_programu_blackjack.png)
+![](/first_semester_C++/projekt_indywidualny/dzialanie_programu_blackjack.png)
 
 <!--
 1. Kontrola wyboru liczby graczy (kolor zielony):
