@@ -6,4 +6,4 @@
 4. [Recursive functions](/first_semester_C++/19_11_23/recursion.md)
 5. [Arrays](/first_semester_C++/19_11_23/arrays.md)
 6. [References and pointers as function parameters](/first_semester_C++/19_11_23/references_and_pointers_as_function_parameters.md)
-9. [Individual_project: BLACKJACK GAME](/projekt_indywidualny/individual_project.md)
+9. [Individual_project: BLACKJACK GAME](/first_semester_C++/projekt_indywidualny/individual_project.md)

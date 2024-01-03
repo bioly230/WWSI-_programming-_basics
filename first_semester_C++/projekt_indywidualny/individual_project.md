@@ -1,5 +1,5 @@
 ##### [Back to topic list.](/first_semester_C++/first_semester_C++.md)
-## Programowanie obiektowe. Gra Blackjack.
+## BLACKJACK GAME.
 <!--
 ### Wprowadzenie do gry Blackjack
 Zasady gry: Graczom są rozdawane karty o pewnych wartościach punktowych.
