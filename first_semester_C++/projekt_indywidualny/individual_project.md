@@ -523,5 +523,80 @@ while (obliczeniePunktow(rekaKrupiera) < 17)
 * Te fragmenty kodu odpowiadają za tasowanie talii kart i ich rozdanie graczom oraz krupierowi. Funkcja `shuffle` jest używana do losowego tasowania kart w talii. Następnie karty są rozdawane graczom i krupierowi zgodnie z zasadami gry w blackjacka.
 -->
 * These pieces of code that are responsible for shuffling the cards and dealing them to the players and the dealer. The `shuffle` function is used to randomly shuffle the cards in the solution. Cards are dealt to players and the dealer according to the blackjack game.
+<!--
+#### Schemat Blokowy. Opis:
+Oto opis schematu blokowego funkcji obliczeniePunktow():
+
+Krok 1:
+
+Funkcja jest inicjalizowana, a zmienne punkty i liczbaAsow są inicjowane wartościami 0.
+
+Krok 2:
+
+Funkcja iteruje po wszystkich kartach w ręce gracza.
+
+Krok 3:
+
+Jeśli ranga karty jest równa AS, to liczbaAsow jest zwiększana o 1.
+
+Krok 4:
+
+Punkty są obliczane na podstawie rangi karty. Jeśli ranga karty jest większa niż 10, to punkty są ustawiane na 10. W przeciwnym razie punkty są ustawiane na wartość rangi karty.
+
+Krok 5:
+
+Jeśli liczbaAsow jest większa od 0 i punkty + 10 nie przekraczają wartości BLACKJACK, to pętla while jest wykonywana.
+
+Krok 6:
+
+W każdym kroku pętli punkty są zwiększane o 10. LiczbaAsow jest zmniejszana o 1.
+
+Krok 7:
+
+Funkcja zwraca wartość zmiennej punkty.
+-->
+#### Block Diagram. Description:
+Here is a description of the flowchart of the calculatePoints() function:
+
+```
+int obliczeniePunktow(const vector<Karta>& reka)
+{
+    int punkty = 0;
+    int liczbaAsow = 0;
+
+    for (const auto& karta : reka)
+    {
+        if (karta.ranga == AS)
+        {
+            liczbaAsow++;
+        }
+        punkty += (karta.ranga > 10) ? 10 : karta.ranga;
+    }
+    
+    while (liczbaAsow > 0 && punkty + 10 <= BLACKJACK)
+    {
+        punkty += 10;
+        liczbaAsow --;
+    }
+    return punkty;
+}
+```
+
+1. The function is initialized and the variables points and numberofAces are initialized to 0.
+
+2. The function iterates over all cards in the player's hand.
+
+3. If the card's rank is equal to AS, the number of Aces is increased by 1.
+
+4. Points are calculated based on the card's rank. If the card's rank is greater than 10, then the points are set to 10. Otherwise, the points are set to the card's rank value.
+
+5. If the number of Asows is greater than 0 and the points + 10 do not exceed the BLACKJACK value, then the while loop is executed.
+
+6. At each step of the loop, the points are increased by 10. The Number of Aces is decreased by 1.
+
+7. The function returns the value of the points variable.
+
+![](/first_semester_C++/projekt_indywidualny/schemat_blokowy_funkcji_obliczaniePunktow.jpg)
+
 ### [Oryginal content of task.](/first_semester_C++/projekt_indywidualny/Uwagi%20na%20temat%20zadan%20indywidualnych.pdf)
 ##### [Back to topic list.](/first_semester_C++/first_semester_C++.md)
